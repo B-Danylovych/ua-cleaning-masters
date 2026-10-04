@@ -1,0 +1,19 @@
+:root {
+    --background-color: #E3EDF7;
+    --dark-color: #2F3E46;
+    --green-color: #2ECC71;
+    --green-hover: #59D98E;
+    --cloud-color: #84C2D7;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--green-color);
+    outline-offset: 3px;
+}

@@ -1,0 +1,125 @@
+#howItWorks { 
+    padding: clamp(25px, 3.5vw, 50px) 5%;
+    text-align: center; 
+    background-color: var(--background-color); 
+} 
+#howItWorks h2 { 
+    margin: 0 0 clamp(40px, 5vw, 70px); 
+    color: var(--dark-color); 
+    font-size: clamp(32px, 4vw, 52px); 
+} 
+#howItWorksContainer { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: clamp(25px, 4vw, 60px); 
+    max-width: 1200px; 
+    margin: 0 auto; 
+} 
+.howItWorksStep { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+
+    opacity: 0;
+    transform: translateX(-150px);
+
+    padding: 20px;
+    border-radius: 20px;
+    transition: box-shadow 0.2s ease;
+} 
+
+.howItWorksStep.show {
+    animation: howItWorksStepAppear 0.7s ease-out forwards;
+}
+
+.howItWorksStep:nth-child(2).show {
+    animation-delay: 0.2s;
+}
+
+.howItWorksStep:nth-child(3).show {
+    animation-delay: 0.4s;
+}
+
+.howItWorksStep:hover {
+    box-shadow: 0 8px 20px rgba(47, 62, 70, 0.15);
+}
+
+@keyframes howItWorksStepAppear {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.howItWorksImage { 
+    width: clamp(120px, 13vw, 180px); 
+    aspect-ratio: 1; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    margin-bottom: 25px; 
+} 
+
+.howItWorksImage img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+
+    transition: transform 0.25s ease;
+} 
+
+.howItWorksStep:hover .howItWorksImage img {
+    transform: scale(1.08);
+}
+
+.howItWorksStep h3 { 
+    margin: 0 0 12px; 
+    color: var(--dark-color); 
+    font-size: clamp(20px, 2vw, 28px); 
+} 
+
+.howItWorksStep p { 
+    max-width: 320px; 
+    margin: 0; 
+    color: var(--dark-color); 
+    font-size: clamp(16px, 1.4vw, 20px); 
+    line-height: 1.5; 
+} 
+
+@media (max-width: 700px) { 
+    #howItWorksContainer { 
+        grid-template-columns: 1fr; 
+        gap: 50px; 
+    } 
+    .howItWorksImage { 
+        width: 140px; 
+    } 
+
+    .howItWorksStep { 
+        transform: translateY(-70px);
+    } 
+
+    .howItWorksStep:nth-child(2).show {
+        animation-delay: 0s;
+    }
+
+    .howItWorksStep:nth-child(3).show {
+        animation-delay: 0s;
+    }
+
+    @keyframes howItWorksStepAppear {
+        from {
+            opacity: 0;
+            transform: translateY(-70px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

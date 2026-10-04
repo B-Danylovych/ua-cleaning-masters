@@ -1,0 +1,88 @@
+#serviceBenefits {
+    padding: clamp(25px, 3.5vw, 50px) 5%;
+    background-color: var(--background-color);
+}
+
+.serviceBenefitsHeading {
+    text-align: center;
+    margin-bottom: clamp(35px, 5vw, 60px);
+}
+
+.serviceBenefitsHeading h2 {
+    margin: 0 0 15px;
+    color: var(--dark-color);
+    font-size: clamp(32px, 4vw, 52px);
+}
+
+.serviceBenefitsHeading p {
+    margin: 0 auto;
+    max-width: 800px;
+    color: var(--dark-color);
+    font-size: clamp(17px, 2vw, 24px);
+    line-height: 1.5;
+}
+
+.serviceBenefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(20px, 3vw, 35px);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.serviceBenefit {
+    padding: clamp(25px, 3vw, 35px);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+.serviceBenefit.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.serviceBenefitImage {
+    display: block;
+    width: clamp(40px, 5vw, 60px);
+    height: clamp(40px, 5vw, 60px);
+    object-fit: contain;
+    margin: 0 auto 18px;
+}
+
+.serviceBenefit h3 {
+    margin: 0 0 10px;
+    color: var(--dark-color);
+    font-size: clamp(18px, 2vw, 24px);
+}
+
+.serviceBenefit p {
+    margin: 0;
+    color: var(--dark-color);
+    font-size: clamp(14px, 1.4vw, 17px);
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .serviceBenefitsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .serviceBenefit {
+        padding: 25px 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    .serviceBenefitsGrid {
+        grid-template-columns: 1fr;
+    }
+}

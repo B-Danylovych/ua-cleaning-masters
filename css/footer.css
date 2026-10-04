@@ -1,0 +1,168 @@
+#mainFooter {
+    padding: 50px 5% 25px;
+    background-color: var(--dark-color);
+    color: #FFFFFF;
+}
+
+.footerMain {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: clamp(30px, 5vw, 80px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.footerLogo {
+    display: block;
+    width: clamp(120px, 15vw, 180px);
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footerCompany p {
+    max-width: 400px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.footerContact,
+.footerSocial {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footerContact span,
+.footerSocial > span {
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.footerContact a {
+    color: #FFFFFF;
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footerContact a:hover {
+    color: var(--green-color);
+    text-decoration: underline;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 15px;
+}
+
+.socialLinks a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    color: #FFFFFF;
+    font-size: 20px;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.socialLinks a:hover {
+    color: var(--green-color);
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footerLegal {
+    display: flex;
+    gap: 20px;
+}
+
+.footerLegal a,
+.footerBottom p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+.footerLegal a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footerLegal a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    #mainFooter {
+        padding: 25px 5% 15px;
+    }
+
+    .footerMain {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+
+    .footerLogo {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .footerCompany p {
+        font-size: 14px;
+    }
+
+    .footerContact span,
+    .footerSocial > span {
+        margin-bottom: 7px;
+        font-size: 14px;
+    }
+
+    .footerContact a {
+        font-size: 18px;
+    }
+
+    .socialLinks {
+        gap: 12px;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding-top: 15px;
+    }
+
+    .footerLegal {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .footerLegal a,
+    .footerBottom p {
+        font-size: 13px;
+    }
+}
